@@ -252,9 +252,12 @@ function checkRoutine(data) {
 }
 
 // Load configurations and start the interval tracker
-chrome.storage.local.get(['enabled', 'username', 'password', 'userSel', 'passSel', 'nextSel', 'submitSel', 'captchaSel'], (data) => {
+const hostname = window.location.hostname;
+chrome.storage.local.get([hostname], (result) => {
+    const data = result[hostname] || {};
+    
     if (data.enabled === false) {
-        console.log("AutoLogin: Extension is disabled.");
+        console.log("AutoLogin: Extension is disabled for " + hostname);
         return;
     }
     
@@ -271,6 +274,6 @@ chrome.storage.local.get(['enabled', 'username', 'password', 'userSel', 'passSel
         captchaInputSel: data.captchaInputSel || 'input[id*="captcha" i], input[name*="captcha" i]'
     };
     
-    console.log("AutoLogin: Starting automation routine...");
+    console.log("AutoLogin: Starting automation routine for " + hostname);
     setInterval(() => checkRoutine(config), 1000);
 });

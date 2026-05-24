@@ -4,10 +4,11 @@
   "version": "1.0",
   "description": "Autofills credentials securely and pauses for manual Captcha solving.",
   "permissions": [
-    "storage"
+    "storage",
+    "tabs"
   ],
   "host_permissions": [
-    "https://students.cuchd.in/*",
+    "<all_urls>",
     "https://api.ocr.space/*"
   ],
   "action": {
@@ -17,7 +18,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://students.cuchd.in/*"
+        "<all_urls>"
       ],
       "js": ["content.js"],
       "run_at": "document_idle"
