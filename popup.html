@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h2>AutoLogin</h2>
+        <label class="switch">
+            <input type="checkbox" id="enabledToggle">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
+    <div class="card">
+        <div class="form-group">
+            <label for="username">Username / Email</label>
+            <input type="text" id="username" placeholder="Enter username">
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password">
+        </div>
+    </div>
+
+    <details>
+        <summary>Advanced: CSS Selectors</summary>
+        <div class="details-content">
+            <div class="form-group">
+                <label for="userSel">Username Input</label>
+                <input type="text" id="userSel" placeholder="Default: input[type='email']...">
+            </div>
+            <div class="form-group">
+                <label for="passSel">Password Input</label>
+                <input type="text" id="passSel" placeholder="Default: input[type='password']">
+            </div>
+            <div class="form-group">
+                <label for="nextSel">Next/Continue Button</label>
+                <input type="text" id="nextSel" placeholder="Default: button[id*='next']">
+            </div>
+            <div class="form-group">
+                <label for="submitSel">Login/Submit Button</label>
+                <input type="text" id="submitSel" placeholder="Default: button[type='submit']">
+            </div>
+            <div class="form-group">
+                <label for="captchaSel">CAPTCHA Image Indicator</label>
+                <input type="text" id="captchaSel" placeholder="Default: img[src*='captcha']">
+            </div>
+            <div class="form-group">
+                <label for="captchaInputSel">CAPTCHA Text Input</label>
+                <input type="text" id="captchaInputSel" placeholder="Default: input[id*='captcha']">
+            </div>
+        </div>
+    </details>
+
+    <button id="saveBtn">Save Settings</button>
+
+    <script src="popup.js"></script>
+</body>
+</html>
