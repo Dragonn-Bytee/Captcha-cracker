@@ -37,22 +37,3 @@ This Chrome extension automates the login process for a specific target domain w
 
 ## Security Notice
 Your credentials are saved locally within Chrome's isolated extension storage (`chrome.storage.local`) and are never exposed to external servers or logged in the browser console. The extension's permissions are tightly scoped to the domains you define in `manifest.json`.
-
-## Uploading to GitHub
-
-To share or back up this extension on GitHub, follow these steps:
-
-1. **Create a new repository** on your GitHub account.
-2. **Initialize Git** in this directory (if you haven't already):
-   - Open your terminal or command prompt in the `captcha filler` folder.
-   - Run: `git init`
-3. **Commit your files**:
-   - Run: `git add .` (This includes all files, but respects the `.gitignore` provided).
-   - Run: `git commit -m "Initial commit of AutoLogin Extension"`
-4. **Push to GitHub**:
-   - Run the commands provided by GitHub to link your remote repository, typically:
-     ```bash
-     git remote add origin https://github.com/YourUsername/YourRepoName.git
-     git branch -M main
-     git push -u origin main
-     ```
